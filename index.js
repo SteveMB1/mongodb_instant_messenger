@@ -45,7 +45,7 @@ async function markRead(sender, recipientId) {
     }]);
 };
 
-async function inbox(recipientId, blockedProfiles) {
+async function inbox(recipientId, blockedProfiles = []) {
     var recipientId = ObjectId(recipientId);
 
     const messages = await db
